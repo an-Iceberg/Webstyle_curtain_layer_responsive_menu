@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sample</title>
+</head>
+<body>
+  <nav>
+    <div id="curtain">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="toggle" onpointerdown="toggle()"></div>
+
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+
+      <li>
+        <a href="#">Products</a>
+      </li>
+
+      <li>
+        <a href="#">Services</a>
+      </li>
+
+      <li>
+        <a href="#">Contact</a>
+      </li>
+
+      <li>
+        <a href="#">Team</a>
+      </li>
+
+      <li>
+        <a href="#">About&nbsp;Us</a>
+      </li>
+    </ul>
+
+    <script type="text/javascript">
+      function toggle() {
+        var curtain = document.getElementById("curtain")
+
+        curtain.classList.toggle("active")
+      }
+    </script>
+  </nav>
+</body>
+</html>

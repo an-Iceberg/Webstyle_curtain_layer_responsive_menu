@@ -1,0 +1,98 @@
+*, *:is(::after, ::before) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 1rem "Veranda", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+body nav #curtain.active + .toggle {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+body nav #curtain.active span {
+  rotate: 0deg;
+}
+body nav #curtain.active span:nth-child(1) {
+  z-index: 1;
+  transition-delay: 0s;
+}
+body nav #curtain.active span:nth-child(2) {
+  z-index: 1;
+  transition-delay: 0.1s;
+}
+body nav #curtain.active span:nth-child(3) {
+  z-index: 1;
+  transition-delay: 0.2s;
+}
+body nav #curtain.active ~ ul {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+body nav #curtain span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  transform-origin: bottom left;
+  rotate: -90deg;
+  transition: all 0.5s ease-in-out;
+}
+body nav #curtain span:nth-child(1) {
+  background-color: #ff1f6b;
+  transition-delay: 0.2s;
+}
+body nav #curtain span:nth-child(2) {
+  background-color: #219dff;
+  transition-delay: 0.1s;
+}
+body nav #curtain span:nth-child(3) {
+  background-color: #111;
+}
+body nav .toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.5s;
+}
+body nav ul {
+  position: absolute;
+  z-index: 100;
+  transition: all 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 0s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+body nav ul li {
+  list-style: none;
+}
+body nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
